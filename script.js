@@ -5,6 +5,7 @@ const resetButton = document.getElementById('reset_button');
 const gridItems = document.querySelectorAll('.grid-item');
 
 changeButton.addEventListener('click', () => {
+    // Reset all grid items to transparent
     gridItems.forEach(item => {
         item.style.backgroundColor = 'transparent';
     });
@@ -22,10 +23,12 @@ changeButton.addEventListener('click', () => {
 });
 
 resetButton.addEventListener('click', () => {
+    // Reset all grid items to transparent
     gridItems.forEach(item => {
         item.style.backgroundColor = 'transparent';
     });
     
+    // Optional: Clear the input fields as well
     blockIdInput.value = '';
     colorIdInput.value = '';
 });
