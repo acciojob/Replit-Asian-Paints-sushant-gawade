@@ -1,12 +1,10 @@
-//your JS code here. If required.
-const blockIdInput = document.getElementById('block_id');
-const colorIdInput = document.getElementById('colour_id');
+const blockIdInput = document.getElementById('input_block_id');
+const colorIdInput = document.getElementById('input_colour_id');
 const changeButton = document.getElementById('change_button');
-const resetButton = document.getElementById('Reset');
+const resetButton = document.getElementById('reset_button');
 const gridItems = document.querySelectorAll('.grid-item');
 
 changeButton.addEventListener('click', () => {
-    // Reset all grid items to transparent before changing the color
     gridItems.forEach(item => {
         item.style.backgroundColor = 'transparent';
     });
@@ -24,12 +22,10 @@ changeButton.addEventListener('click', () => {
 });
 
 resetButton.addEventListener('click', () => {
-    // Reset all grid items to transparent
     gridItems.forEach(item => {
         item.style.backgroundColor = 'transparent';
     });
     
-    // Optional: Clear the input fields as well
     blockIdInput.value = '';
     colorIdInput.value = '';
 });
